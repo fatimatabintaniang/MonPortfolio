@@ -10,22 +10,34 @@
 </head>
 
 <body class="overflow-x-hidden">
-  <div class="w-screen">
+  <div class="w-screen dark:bg-gray-800">
     <!-- ==========================================Navbar================================= -->
 
-    <nav class=" flex justify-center gap-64 p-2  shadow-xl items-center bg-black ">
+    <nav class=" dark:text-black flex justify-center gap-64 p-2 shadow-xl items-center bg-black fixed top-0 left-0 w-full z-50">
       <h1 class="text-[#FFC115]">MY PORTFOLIO</h1>
       <ul class="flex space-x-11 text-white">
-        <li>Accueil</li>
-        <li>A propos</li>
-        <li>Service</li>
-        <li>Realisation</li>
+          <li><a href="#accueil" class="hover:text-[#FFC115]">Accueil</a></li>
+          <li><a href="#apropos" class="hover:text-[#FFC115]">À propos</a></li>
+          <li><a href="#services" class="hover:text-[#FFC115]">Services</a></li>
+          <li><a href="#realisations" class="hover:text-[#FFC115]">Réalisations</a></li>
+          <li><a href="#contacts" class="hover:text-[#FFC115]">Contact</a></li>
       </ul>
-      <button class="bg-slate-600 text-white p-2 px rounded">Connexion</button>
-    </nav>
+      
+      <!-- Bouton Theme -->
+      <button id="theme-toggle" class="bg-slate-600 text-white p-2 rounded hover:bg-slate-700">
+          <svg id="sun-icon" class="w-6 h-6 hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2v2m0 16v2m9-9h-2M5 12H3m15.36 6.36l-1.42-1.42M6.36 6.36L4.93 4.93m12.72 0l1.42 1.42M6.36 17.64l-1.42 1.42M12 6a6 6 0 110 12 6 6 0 010-12z" />
+          </svg>
+          <svg id="moon-icon" class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646a9.003 9.003 0 1011.708 11.708z" />
+          </svg>
+      </button>
+  </nav>
+ 
+  
     <!-- ==========================================section1================================= -->
-    <div class="flex h-[80vh]">
-      <div class="bg-[#000000c8] w-[70%] text-white  p-32">
+    <div class="flex h-[80vh] mt-14">
+      <div class="bg-[#000000c8] w-[70%] text-white  p-32" id="accueil">
         <div class="text-3xl">Bonjour</div>
         <div class="text-6xl">Je suis Fatima</div>
         <span class="text-2xl">Conceptrice et developpeuse <br> web independante</span>
@@ -41,14 +53,17 @@
       </div>
     </div>
     <!-- ==========================================section2================================= -->
-    <div class="flex h-[89vh] p-28 bg-black ">
+    <div class="flex p-28 bg-black " id="apropos">
       <div class="w-[45%] ">
         <div class="border-8 border-[#FFC115] h-[65vh] w-[70%]">
           <div class="pl-16 -mt-16 z-40 absolute"> <img src="./image/image 2.png" class="bg-white w-[80%]" alt=""></div>
         </div>
       </div>
       <div class="w-[55%] text-white space-y-7 mt-7 pr-10">
-        <h2 class="text-4xl">A propos de moi</h2>
+        <h3 class="text-3xl inline-block relative py-3"> 
+          A propos de moi
+          <span class="absolute left-0 bottom-0 w-[40%] h-1 bg-yellow-500 "></span>
+      </h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.retrter
           Quisquam, doloribus nam? Qui vitae, quae eligendi totam vvv
           xcepturi, esse ipsam recusandae rem maxime velit suntvvv y
@@ -62,11 +77,14 @@
       </div>
     </div>
     <!-- ==========================================section3================================= -->
-    <div class="  bg-[#000000c8] p-28  space-y-16 text-white">
+    <div class="  bg-[#000000c8] p-28  space-y-16 text-white" id="services">
       <!-- ==========================================sous section 1================================= -->
       <div class="space-y-7  w-[40%]">
         <div class="space-y-2">
-          <h3 class="text-3xl">Services</h3>
+          <h3 class="text-3xl inline-block relative py-3"> 
+            Services
+            <span class="absolute left-0 bottom-0 w-[40%] h-1 bg-yellow-500 "></span>
+        </h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing
             Quisquam, doloribus nam? Qui vitae, quae eligendi totamelit.rs
           </p>
@@ -110,11 +128,14 @@
     </div>
 
     <!-- ==========================================section4================================= -->
-    <div class="bg-[#000000] p-28 space-y-16">
+    <div class="bg-[#000000] p-28 space-y-16" id="realistions">
       <!-- ==========================================sous section 1================================= -->
       <div class=" grid space-y-16">
         <div class="space-y-2 text-white">
-          <h3 class="text-3xl">Realisations</h3>
+          <h3 class="text-3xl inline-block relative py-3"> 
+            Realistions
+            <span class="absolute left-0 bottom-0 w-[40%] h-1 bg-yellow-500 "></span>
+        </h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing
             Quisquam, doloribus nam? Qui vitae, quae eligendi totamelit.rs
           </p>
@@ -137,11 +158,11 @@
           <div>
             <img src="./image/img7.png" alt="">
             <div>
-              <div class="space-y-2 bg-white p-4 rounded-b">
+              <div class="space-y-4 bg-white p-4 rounded-b">
                 <h3 class="text-2xl">Project name here</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.
                 </p>
-                <a href="#">Voir plus</a>
+                <a href="#">Voir plus <i class="ri-arrow-right-s-line"></i></a>
               </div>
             </div>
           </div>
@@ -149,11 +170,11 @@
           <div>
             <img src="./image/img8.png" alt="">
             <div>
-              <div class="space-y-2 bg-white p-4 rounded-b">
+              <div class="space-y-4 bg-white p-4 rounded-b">
                 <h3 class="text-2xl">Project name here</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.
                 </p>
-                <a href="#">Voir plus</a>
+                <a href="#">Voir plus <i class="ri-arrow-right-s-line"></i></a>
               </div>
             </div>
           </div>
@@ -163,22 +184,22 @@
           <div>
             <img src="./image/img9.png" alt="">
             <div>
-              <div class="space-y-2 bg-white p-4 rounded-b">
+              <div class="space-y-4 bg-white p-4 rounded-b">
                 <h3 class="text-2xl">Project name here</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.
                 </p>
-                <a href="#">Voir plus</a>
+                <a href="#">Voir plus <i class="ri-arrow-right-s-line"></i></a>
               </div>
             </div>
           </div>
           <div>
             <img src="./image/img10.png" alt="">
             <div>
-              <div class="space-y-2 bg-white p-4 rounded-b">
+              <div class="space-y-4 bg-white p-4 rounded-b">
                 <h3 class="text-2xl">Project name here</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.
                 </p>
-                <a href="#">Voir plus</a>
+                <a href="#">Voir plus <i class="ri-arrow-right-s-line"></i></a>
               </div>
             </div>
           </div>
@@ -191,10 +212,13 @@
     </div>
     <!-- ========================================== section 5================================= -->
 
-    <div class="bg-[#000000c8] p-28 space-y-16">
+    <div class="bg-[#000000c8] p-28 space-y-16" id="contacts">
       <!-- ==========================================sous section 1================================= -->
       <div class="text-center space-y-7 text-white">
-        <h3 class="text-3xl">Contactez-moi</h3>
+          <h3 class="text-3xl inline-block relative py-3 "> 
+            Contactez-moi
+            <span class="absolute left-1/2 -translate-x-1/2 bottom-0 w-[40%] h-1 bg-yellow-500 "></span>
+        </h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
       </div>
       <!-- ==========================================sous section 2================================= -->
@@ -224,8 +248,43 @@
       </div>
 
     </div>
+    <!-- ========================================== footer================================= -->
+    <footer class="bg-[#000000] px-28 p-5 space-y-7">
+      <div class="grid grid-cols-2 ">
+        <h1 class="text-[#FFC115]">MY PORTFOLIO</h1>
+        <div class="text-white space-x-4 text-end">
+          <i class="ri-facebook-circle-fill"></i>
+          <i class="ri-twitter-fill"></i>
+          <i class="ri-instagram-fill"></i>
+          <i class="ri-github-fill"></i>
+        </div>
+      </div>
+
+      <hr  class="border-t-2 border-yellow-500">
+      <div class="grid grid-cols-2 ">
+        <h1 class="text-white">© 2023 Relume. All rights reserved.</h1>
+        <div class="text-white space-x-4 text-end text-sm">
+          <span>Privacy Policy</span>
+          <span>Terms of Service</span>
+          <span>Cookies Settings</span>
+        </div>
+      </div>
+    </footer>
 
   </div>
+
+   
+ <script>
+    const themeToggle = document.getElementById('theme-toggle');
+    const sunIcon = document.getElementById('sun-icon');
+    const moonIcon = document.getElementById('moon-icon');
+
+    themeToggle.addEventListener('click', () => {
+        document.documentElement.classList.toggle('dark');
+        sunIcon.classList.toggle('hidden');
+        moonIcon.classList.toggle('hidden');
+    });
+</script>
 </body>
 
 </html>
